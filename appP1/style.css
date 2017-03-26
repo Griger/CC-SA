@@ -1,0 +1,74 @@
+body {
+    background-color: #1E1F26;
+    font-family: sans-serif;
+    background-position: center top;
+    background-size: 100% auto;
+}
+
+
+form {
+  color: white;
+}
+
+input {
+  background-color: #283655;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+select {
+  background-color: #283655;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    color: white;
+}
+
+thead {
+    background-color: #283655;
+    color: white;
+    font-weight: bold;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #4D648D}
+
+table tbody tr:hover {
+    background-color: #D0E1F9;
+    color: #1E1F26;
+}
+
+/*Estilo para los botones del menu principal*/
+.menu-btt{
+ display: inline-block;
+ border: none;
+ color: #FFF;
+ border-radius: 0px 20px 3px;
+ -webkit-border-radius: 0px 20px 3px;
+ -moz-border-radius: 0px 20px 3px;
+ font-family: sans-serif;
+ width: auto;
+ height: auto;
+ font-size: 40px;
+ padding: 10px 40px;
+ text-shadow: #000 0px 1px #4D648D;
+ background-color: #283655;
+}
+.menu-btt:hover, .menu-btt:active{
+ border: none;
+ color: #FFF;
+ box-shadow: inset 22px -19px -26px 0 #4D648D;
+ -moz-box-shadow: inset 22px -19px -26px 0 #4D648D;
+ -webkit-box-shadow: inset 22px -19px -26px 0 #4D648D;
+ background-color: #4D648D;
+}
