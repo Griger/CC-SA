@@ -1,0 +1,99 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{subfigure, wrapfig}
+\usepackage{multirow}
+
+\date{} %not show date
+
+%beamer's options
+\usetheme{Montpellier}
+\author{Gustavo Rivas Gervilla}
+\title{Spark \& IoT}
+
+\setbeamertemplate{section in toc shaded}[default][50]
+%beamer's colors
+\setbeamercolor{section in toc}{fg=orange}
+\setbeamercolor{section in toc shaded}{fg=orange}
+\setbeamercolor{structure}{fg=brown}
+\setbeamercolor{title}{fg=brown}
+\setbeamercolor{titlelike}{fg=brown}
+
+\definecolor{deepBlue}{RGB}{10, 9, 68}
+\definecolor{deepYellow}{RGB}{219, 219, 8}
+\definecolor{deepRed}{RGB}{130, 20, 6}
+\definecolor{orangeRed}{RGB}{211, 50, 10}
+
+
+\begin{document}
+	\begin{frame}[plain]
+		\titlepage
+	\end{frame}
+		
+	\begin{frame}
+		\frametitle{Contenido}
+		\tableofcontents
+	\end{frame}
+	
+	\AtBeginSection[]{
+		\begin{frame}
+			\frametitle{Contenido}
+			\tableofcontents[currentsection]
+		\end{frame}
+	}
+	
+	\section{Introducción}
+	
+	\begin{frame}
+		\begin{itemize}
+			\item ¿Qué es el IoT?
+			\item ¿Qué se quiere de este proyecto? $\longrightarrow$ \textcolor{orange}{\textbf{Spark}}
+		\end{itemize}		
+	\end{frame}
+	
+	\subsection{Spark}
+	
+	\begin{frame}
+		¿Qué es Spark?
+		\begin{itemize}
+			\item Código abierto.
+			\item Sistema de propósito general para el procesamiento de Big Data en un sistema cluster.
+			\item APIs en:\textcolor{deepBlue}{Py}\textcolor{deepYellow}{thon}, \textcolor{deepRed}{Scala} y \textcolor{orangeRed}{Java}.
+			\item Con librerías para computación \textbf{paralela}.
+		\end{itemize}
+	\end{frame}
+	
+	\subsection{Spark Streaming}
+	
+	\begin{frame}
+		\begin{itemize}
+			\item Librería para computación paralela.
+		\end{itemize}
+	\end{frame}
+	
+	\subsection{Kafka}
+	
+	\begin{frame}
+		\begin{itemize}
+			\item Sistema de mensajes distribuido.
+		\end{itemize}
+	\end{frame}
+	
+	\section{La aplicación}
+	
+	\section{Obteniendo los datos}
+	
+	\section{Procesando los datos}
+	
+	\section{Mostrando los datos}
+	
+	\section{Bibliografía}
+	
+	\begin{frame}[plain]
+		\begin{center}
+			\textcolor{orange}{\textbf{¿Preguntas?}}
+		\end{center}
+	\end{frame}
+	
+	
+\end{document}
