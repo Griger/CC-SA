@@ -24,8 +24,8 @@ public class Pearson {
 
       //ahora queremos que el Mapper tenga un formato de salida distinto al Reducer.
       conf.setMapOutputKeyClass(Text.class);
-      conf.setMapOutputValueClass(ArrayWritable.class);
-      
+      conf.setMapOutputValueClass(DoubleArrayWritable.class);
+
     	conf.setOutputKeyClass(Text.class);
     	conf.setOutputValueClass(DoubleWritable.class);
     	JobClient.runJob(conf);

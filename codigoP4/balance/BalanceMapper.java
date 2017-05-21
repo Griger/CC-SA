@@ -9,7 +9,7 @@ import org.apache.hadoop.mapred.Mapper;
 import org.apache.hadoop.mapred.OutputCollector;
 import org.apache.hadoop.mapred.Reporter;
 
-public class MinMapper extends MapReduceBase implements Mapper<LongWritable, Text, Text, DoubleWritable> {
+public class BalanceMapper extends MapReduceBase implements Mapper<LongWritable, Text, Text, DoubleWritable> {
   private static final int MISSING = 9999;
 
   public void map(LongWritable key, Text value, OutputCollector<Text, DoubleWritable> output, Reporter reporter) throws IOException {

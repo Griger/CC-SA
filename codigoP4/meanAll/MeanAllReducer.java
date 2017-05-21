@@ -20,8 +20,8 @@ public class MeanAllReducer extends MapReduceBase implements Reducer<Text, Doubl
 				sum += values.next().get();
 			}
 
-			Text key = new Text("Mean" + key.toString());
+			Text newKey = new Text("Mean" + key.toString());
 
-			output.collect(key, new DoubleWritable(sum / nRows));
+			output.collect(newKey, new DoubleWritable(sum / nRows));
     }
 }
