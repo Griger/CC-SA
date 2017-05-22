@@ -11,3 +11,6 @@ Pasos para limpiar el directorio de salidas cada vez que queramos ejecutar un nu
 ```bash
 hdfs dfs -rm stat/output/* && hdfs dfs -rmdir stat/output
 ```
+javac -cp /usr/lib/hadoop/*:/usr/lib/hadoop-mapreduce/* -d java_classes MinMax*
+/usr/java/jdk1.7.0_51/bin/jar -cvf minmax.jar -C java_classes / .
+hadoop jar minmax.jar minmaxGriger.MinMax /user/isaac/datasets/higgsImb10-5-fold/higgsImb10.data ./stat/output/

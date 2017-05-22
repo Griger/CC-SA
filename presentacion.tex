@@ -1,8 +1,9 @@
-\documentclass{beamer}
+\documentclass[dvipsnames]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{subfigure, wrapfig}
 \usepackage{multirow}
+\usepackage{graphicx}
 
 \date{} %not show date
 
@@ -50,6 +51,28 @@
 			\item ¿Qué se quiere de este proyecto? $\longrightarrow$ \textcolor{orange}{\textbf{Spark}}
 		\end{itemize}		
 	\end{frame}
+
+        \begin{frame}
+          \begin{itemize}
+          \item Muchos dispositivos de diversa naturaleza.
+          \item Intercambio y envío de información \textbf{continuo}.
+          \item \textcolor{deepRed}{Gran cantidad} de datos de diversa naturaleza $\Rightarrow$ \textcolor{SkyBlue}{\textbf{CC}}. 
+          \end{itemize}
+        \end{frame}
+
+        \begin{frame}
+          \begin{itemize}
+          \item En 2020 habrá un cuarto de billón de vehículos conectados [Gartner] $\Rightarrow$ \textbf{muchos datos}.
+          \item Analizando estos datos podemos: analizar tráfico de una zona o detectar si un conductor no está en condiciones de conducir.
+          \item Se propone \textcolor{orange}{\textbf{Spark}} para analizar todos estos datos.
+          \end{itemize}
+        \end{frame}
+
+        \begin{frame}
+          \begin{center}
+          \includegraphics[scale=0.5]{img/arquitectura.jpg}  
+          \end{center}          
+        \end{frame}
 	
 	\subsection{Spark}
 	
@@ -58,7 +81,7 @@
 		\begin{itemize}
 			\item Código abierto.
 			\item Sistema de propósito general para el procesamiento de Big Data en un sistema cluster.
-			\item APIs en:\textcolor{deepBlue}{Py}\textcolor{deepYellow}{thon}, \textcolor{deepRed}{Scala} y \textcolor{orangeRed}{Java}.
+			\item APIs en: \textcolor{deepBlue}{Python}, \textcolor{deepRed}{Scala} y \textcolor{orangeRed}{Java}.
 			\item Con librerías para computación \textbf{paralela}.
 		\end{itemize}
 	\end{frame}
@@ -86,6 +109,10 @@
 	\section{Procesando los datos}
 	
 	\section{Mostrando los datos}
+
+        \section{Otros casos de interés}
+
+
 	
 	\section{Bibliografía}
 	
