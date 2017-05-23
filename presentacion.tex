@@ -4,6 +4,7 @@
 \usepackage{subfigure, wrapfig}
 \usepackage{multirow}
 \usepackage{graphicx}
+\usepackage{tikzsymbols}
 
 \date{} %not show date
 
@@ -69,12 +70,33 @@
         \end{frame}
 
         \begin{frame}
+          \begin{itemize}
+          \item Proyecto académico.
+          \item Analizar y procesar datos de vahículos $\Rightarrow$ Panel de monitorización
+          \item En su \href{https://github.com/baghelamit/iot-traffic-monitor}{\textcolor{deepBlue}{GitHub}} tenéis todo el código disponible \Winkey.
+          \end{itemize}
+        \end{frame}
+
+        \begin{frame}
           \begin{center}
           \includegraphics[scale=0.5]{img/arquitectura.jpg}  
           \end{center}          
         \end{frame}
+
+        \section{Kafka: el productor}
 	
-	\subsection{Spark}
+	\begin{frame}
+          \begin{figure}[H]
+            \centering
+            \includegraphics{img/kafka-apis.png}
+          \end{figure}
+          \begin{itemize}
+          \item Sistema de mensajes distribuido.
+          \end{itemize}
+	\end{frame}
+
+	
+	\section{Spark}
 	
 	\begin{frame}
 		¿Qué es Spark?
@@ -86,29 +108,16 @@
 		\end{itemize}
 	\end{frame}
 	
-	\subsection{Spark Streaming}
+	\section{Spark Streaming}
 	
 	\begin{frame}
 		\begin{itemize}
 			\item Librería para computación paralela.
 		\end{itemize}
 	\end{frame}
-	
-	\subsection{Kafka}
-	
-	\begin{frame}
-		\begin{itemize}
-			\item Sistema de mensajes distribuido.
-		\end{itemize}
-	\end{frame}
-	
-	\section{La aplicación}
-	
-	\section{Obteniendo los datos}
-	
-	\section{Procesando los datos}
-	
-	\section{Mostrando los datos}
+
+        \section{Cassandra}
+
 
         \section{Otros casos de interés}
 
