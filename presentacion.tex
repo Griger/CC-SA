@@ -4,6 +4,7 @@
 \usepackage{subfigure, wrapfig}
 \usepackage{multirow}
 \usepackage{graphicx}
+\usepackage{hyperref}
 \usepackage{tikzsymbols}
 
 \date{} %not show date
@@ -21,10 +22,19 @@
 \setbeamercolor{title}{fg=brown}
 \setbeamercolor{titlelike}{fg=brown}
 
+%defined colors
 \definecolor{deepBlue}{RGB}{10, 9, 68}
 \definecolor{deepYellow}{RGB}{219, 219, 8}
 \definecolor{deepRed}{RGB}{130, 20, 6}
 \definecolor{orangeRed}{RGB}{211, 50, 10}
+\definecolor{redBrown}{RGB}{99, 7, 7}
+
+%hyperref setup
+\hypersetup{
+     colorlinks   = true,
+     linkcolor = brown,
+     urlcolor = redBrown
+}
 
 
 \begin{document}
@@ -72,7 +82,7 @@
         \begin{frame}
           \begin{itemize}
           \item Proyecto académico.
-          \item Analizar y procesar datos de vahículos $\Rightarrow$ Panel de monitorización
+          \item Analizar y procesar datos de vehículos $\Rightarrow$ Panel de monitorización
           \item En su \href{https://github.com/baghelamit/iot-traffic-monitor}{\textcolor{deepBlue}{GitHub}} tenéis todo el código disponible \Winkey.
           \end{itemize}
         \end{frame}
@@ -83,51 +93,57 @@
           \end{center}          
         \end{frame}
 
-        \section{Kafka: el productor}
+        \section{Kafka: producir}
 	
 	\begin{frame}
           \begin{figure}[H]
             \centering
-            \includegraphics{img/kafka-apis.png}
+            \includegraphics[scale=0.7]{img/kafka-apis.png}
           \end{figure}
           \begin{itemize}
-          \item Sistema de mensajes distribuido.
+          \item Mensaje $:=$ \{clave, valor, instante\} $\in$ stream $\in$ topics $\in$ log particionado $\Rightarrow$ \textcolor{deepRed}{tolerancia a fallos}.
+          \item Lo mejor del sistema de colas (división de tareas) y lo mejor del modelo publicar-subscribir (\textit{broadcasting}).
+          \item Conservan el orden de los mensajes.
           \end{itemize}
 	\end{frame}
-
 	
-	\section{Spark}
+	\section{Spark Streaming: procesar}
 	
 	\begin{frame}
-		¿Qué es Spark?
-		\begin{itemize}
-			\item Código abierto.
-			\item Sistema de propósito general para el procesamiento de Big Data en un sistema cluster.
-			\item APIs en: \textcolor{deepBlue}{Python}, \textcolor{deepRed}{Scala} y \textcolor{orangeRed}{Java}.
-			\item Con librerías para computación \textbf{paralela}.
-		\end{itemize}
-	\end{frame}
-	
-	\section{Spark Streaming}
+          ¿Qué es Spark?
+          \begin{itemize}
+          \item Código abierto.
+          \item Sistema de propósito general para el procesamiento de Big Data en un sistema cluster.
+          \item APIs en: \textcolor{deepBlue}{Python}, \textcolor{deepRed}{Scala} y \textcolor{orangeRed}{Java}.
+          \item Con librerías para computación \textbf{paralela}.
+          \end{itemize}
+	\end{frame}	
 	
 	\begin{frame}
 		\begin{itemize}
-			\item Librería para computación paralela.
+                \item Chicha
+                \item Librería para computación paralela.
 		\end{itemize}
 	\end{frame}
 
-        \section{Cassandra}
+        \section{Cassandra: almacenar}
 
-
-        \section{Otros casos de interés}
-
-
-	
+        \begin{frame}
+          \begin{itemize}
+          \item ¿Por qué Cassandra y no MongoDB?
+          \end{itemize}
+        \end{frame}
+        
+        \section{Conclusiones}
+        	
 	\section{Bibliografía}
 	
 	\begin{frame}
 		\begin{itemize}
-		\item \href{https://www.infoq.com/articles/traffic-data-monitoring-iot-kafka-and-spark-streaming}{Art ppal.}
+		\item \href{https://www.infoq.com/articles/traffic-data-monitoring-iot-kafka-and-spark-streaming}{Art. ppal.}
+                \item \href{http://kafka.apache.org/intro}{Introducción a Kafka}
+                \item \href{http://www.libelium.com/resources/top_50_iot_sensor_applications_ranking/}{50 utilidades del IoT}
+                \item \href{https://www.quora.com/What-is-the-actual-role-of-ZooKeeper-in-Kafka}{¿Por qué Zookeeper con Kafka?}
 		\end{itemize}
 	\end{frame}
 	
