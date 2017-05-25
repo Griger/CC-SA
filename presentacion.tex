@@ -36,7 +36,6 @@
      urlcolor = redBrown
 }
 
-
 \begin{document}
 	\begin{frame}[plain]
 		\titlepage
@@ -56,13 +55,6 @@
 	
 	\section{Introducción}
 	
-	\begin{frame}
-		\begin{itemize}
-			\item ¿Qué es el IoT?
-			\item ¿Qué se quiere de este proyecto? $\longrightarrow$ \textcolor{orange}{\textbf{Spark}}
-		\end{itemize}		
-	\end{frame}
-
         \begin{frame}
           \begin{itemize}
           \item Muchos dispositivos de diversa naturaleza.
@@ -74,7 +66,7 @@
         \begin{frame}
           \begin{itemize}
           \item En 2020 habrá un cuarto de billón de vehículos conectados [Gartner] $\Rightarrow$ \textbf{muchos datos}.
-          \item Analizando estos datos podemos: analizar tráfico de una zona o detectar si un conductor no está en condiciones de conducir.
+          \item Analizando estos datos podemos analizar tráfico de una zona o detectar si un conductor no está en condiciones de conducir.
           \item Se propone \textcolor{orange}{\textbf{Spark}} para analizar todos estos datos.
           \end{itemize}
         \end{frame}
@@ -136,14 +128,20 @@
 	\end{frame}
 
         \begin{frame}
-          \begin{itemize}
-          \item Detalles de funcionamiento I
-          \end{itemize}
+          \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.4]{img/script.png}
+          \end{figure}
         \end{frame}
 
         \begin{frame}
           \begin{itemize}
-          \item Detalles de funcinamiento II
+          \item La interfaz de Python es algo limitada. 
+          \item Se especifica un ``flujo'' que luego se ejecuta.
+          \item \texttt{map, reduce, join, reduceByKey...}
+          \item Permite operar por ventanas.
+          \item Podemos tener \textcolor{deepRed}{replicación} (\texttt{StorageLevel}).
+          \item $\frac{\text{Tolerancia a fallos}}{\text{RDD + recuperación del Driver + replicación}}$
           \end{itemize}
         \end{frame}
         
@@ -151,8 +149,19 @@
 
         \begin{frame}
           \begin{itemize}
-          \item ¿Por qué Cassandra y no MongoDB?
+          \item Tolerancia a fallos \& Durabilidad.
+          \item Rendimiento.
+          \item Disponibilidad.
+          \item Elasticidad.
+          \item Descentralizada.
+          \item Escalabilidad. \textcolor{deepRed}{Escalabilidad de escritura} (varios \textit{masters}).
           \end{itemize}
+
+          \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.08]{img/grafica.jpg}
+          \end{figure}
+
         \end{frame}
         
         \section{Conclusiones}
@@ -160,6 +169,10 @@
         \begin{frame}
           \begin{itemize}
           \item No hay una herramienta única.
+          \item Pequeños problemas $\Rightarrow$ gran cantidad de datos.
+          \item CC algo indispensable.
+          \item Herramientas de alto nivel que facilitan nuestro trabajo.
+          \item Cassandra parece una muy buena opción.
           \end{itemize}
         \end{frame}
 
@@ -172,6 +185,10 @@
                 \item \href{http://kafka.apache.org/intro}{Introducción a Kafka}
                 \item \href{http://www.libelium.com/resources/top_50_iot_sensor_applications_ranking/}{50 utilidades del IoT}
                 \item \href{https://www.quora.com/What-is-the-actual-role-of-ZooKeeper-in-Kafka}{¿Por qué Zookeeper con Kafka?}
+                \item \href{http://spark.apache.org/docs/latest/streaming-programming-guide.html}{Introducción a Spark Streaming}
+                \item \href{http://www.datastax.com/nosql-databases/benchmarks-cassandra-vs-mongodb-vs-Hbase}{Comparativa BBDD}
+                \item \href{https://scalegrid.io/blog/cassandra-vs-mongodb/}{Cassandra vs. MongoDB}
+                \item \href{http://cassandra.apache.org/}{Web de Apache Cassandra}
 		\end{itemize}
 	\end{frame}
 	
